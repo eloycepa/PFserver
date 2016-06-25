@@ -4,6 +4,8 @@ var multer  = require('multer');
 
 var tracks_dir = process.env.TRACKS_DIR || './media/';
 
+console.log('a ti te piya?');
+
 var trackController = require('../controllers/track_controller');
 
 router.get('/', function(req, res) {

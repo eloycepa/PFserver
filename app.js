@@ -6,10 +6,25 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var partials = require('express-partials');
 var methodOverride = require('method-override');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 
 var app = express();
+
+/*BBDD*/
+
+console.log('Aqui si que no llega');
+
+mongoose.connect('mongodb://localhost/tracks', function(err, res) {
+  if (err){
+    console.log('ERROR: conectando a la DB. '+err);
+  }else{
+    console.log('Conectado a la DB');
+  }
+});
+
+var models = require('./models/tracks')(app,mongoose);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

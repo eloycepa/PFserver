@@ -1,9 +1,19 @@
 var fs = require('fs');
 //var track_model = require('./../models/track');
 var mongoose = require('mongoose');
-var Tracks = require('./../models/tracks');
-var Track = mongoose.model('Tracks');
 
+
+var querystring = require('querystring');
+var http = require('http');
+
+var Tracks = require('./../models/tracks');
+
+
+
+//var Tracks = require('./../models/tracks');
+console.log('ANTES');
+var Track = mongoose.model('Tracks');
+console.log('DESPUES');
 
 // Devuelve una lista de las canciones disponibles y sus metadatos
 exports.list = function (req, res) {
