@@ -13,10 +13,7 @@ var routes = require('./routes/index');
 var app = express();
 
 /*BBDD*/
-
-console.log('Aqui si que no llega');
-
-mongoose.connect('mongodb://localhost/tracks', function(err, res) {
+mongoose.connect('mongodb://127.0.0.1/tracks', function(err, res) {
   if (err){
     console.log('ERROR: conectando a la DB. '+err);
   }else{
