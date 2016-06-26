@@ -8,7 +8,7 @@
 	<%if (errornosongfound) { %>
 		<label style="color:red;" id="notfoundmessage"> Select a file to upload please. </label>
 	<% } %>
-	<br>
+	<input class="upload_field" type="file" name="track"/><br>
 	<button id="upload" class="hint upload_field" type="submit">Upload</button>
 	<br>
 	<%if (msgsuccess) { %>
