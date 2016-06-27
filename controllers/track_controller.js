@@ -59,7 +59,7 @@ exports.show = function (req, res) {
 // - Escribir en el registro la verdadera url generada al añadir el fichero en el servidor tracks.cdpsfy.es
 exports.create = function (req, res) {
 	/***OJO!!! CAMBIAR ESTA URL POR LA QUE SEA PARA IR HACIA TRACKS. Seguramente tracks.cdpsfy.es **/
-	var urlPostTracks = 'http://www.tracks.cdpsfy.es/tracks';
+	var urlPostTracks = 'http://www.tracks.cdpsfy.es/api/tracks';
 
 	var track = req.files.track;
 	//si no hay cancion
