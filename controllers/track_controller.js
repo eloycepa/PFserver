@@ -144,7 +144,7 @@ exports.create = function (req, res) {
 // - Eliminar en tracks.cdpsfy.es el fichero de audio correspondiente a trackId
 exports.destroy = function (req, res) {
 	var diskName = req.params.id;
-
+	console.log(diskName);
 	//var trackId = req.params.id;
 	//var trackSelected = track_model.tracks[trackId];
 	//var diskName = trackSelected.diskName;
